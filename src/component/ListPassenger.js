@@ -4,18 +4,22 @@ const ListPassenger = (props) => {
     <div>
       <table cellPadding="5px" cellSpacing="0" style={{ margin: 'auto' }}>
         <thead bgcolor="red">
-          <td>Nama</td>
-          <td>Umur</td>
-          <td>Jenis Kelamin</td>
-          <td bgcolor="white" className="removeBorder"></td>
+          <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jenis Kelamin</th>
+            <th bgcolor="white" className="removeBorder"></th>
+          </tr>
         </thead>
-        {props.data.map((item) => (
-          <ListItem
-            key={item.id}
-            data={item}
-            hapusPengunjung={props.hapusPengunjung}
-          />
-        ))}
+        <tbody>
+          {props.data.map((item) => (
+            <ListItem
+              key={item.id}
+              data={item}
+              hapusPengunjung={props.hapusPengunjung}
+            />
+          ))}
+        </tbody>
       </table>
     </div>
   )
