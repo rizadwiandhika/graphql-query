@@ -6,9 +6,10 @@ export default function Activity(props) {
       <div className="flex gap-4 items-center">
         <input
           className="hover:cursor-pointer"
-          onClick={() => props.handleToggleActivity(props.id)}
+          onChange={() => props.handleToggleActivity(props.id)}
           type="checkbox"
           id="finished"
+          checked={props.finished}
         />
         <p className={props.finished ? 'line-through text-gray-400' : ''}>
           {props.activity}
